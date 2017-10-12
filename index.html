@@ -14,7 +14,7 @@
 		<div id="seacherBar"class="search_bar">
 			<div class="search_box">
 				<i class="icon_search"></i>
-				<input placeholder="搜索你想要到商品"></input>
+				<input id="bar" placeholder="搜索你想要到商品"></input>
 			</div>
 		</div>
 	</header>
@@ -116,19 +116,19 @@
 		    <div class="Module-con">
 		      <div class="swiper-container swiper-jingxuan" style="padding-top:34px;">
 		        <div class="swiper-wrapper">
-		          <div class="swiper-slide">
-		          	<a href="#"><img src="img/ban4.jpg" /></a>
-		          	<a href="#"><img src="img/ban4.jpg" /></a>
-		          	<a href="#"><img src="img/ban4.jpg" /></a>
+		          <div class="swiper-slide goods-list">         	
 		          </div>
-		          <div class="swiper-slide"><a href="#"><img src="img/ban4.jpg" /></a></div>
-		          <div class="swiper-slide"><a href="#"><img src="" /></a></div>
-		          <div class="swiper-slide"><a href="#"><img src="" /></a></div>
+		          <div class="swiper-slide goods-list">          	
+		          </div>
+		          <div class="swiper-slide goods-list">	          	
+		          </div>
+		          <div class="swiper-slide goods-list">
+		          </div>
 		        </div>
 		     	<div class="swiper-pagination  jingxuan-pagination swiper-pagination-fraction">
 		     		<span class="swiper-pagination-current">1</span>
 		     		/
-		     		<span class="swiper-pagination-total">6</span>
+		     		<span class="swiper-pagination-total">4</span>
 		     	</div>
 		      </div>
 		    </div>
@@ -138,73 +138,9 @@
 			 <div class="Module-tit-line"><span>猜你喜欢</span></div>
 		     <div class="Module-con">
 		     	<ul class="pro-list clear">
-		     		<li>
-		     			<a href="">
-		     				<div class="proimg">
-		     					<img src="img/ban4.jpg"/>
-		     				</div>
-		     				<div class="protex">
-		     					<div class="name">
-		     						洋河蓝色瓶装经典Q7浓香型白酒500ml52度高端纯粮食白酒2瓶装包邮
-		     					</div>
-		     					<div class="pro-pri">
-		     						$
-		     						<span>100</span>
-		     					</div>
-		     				</div>
-		     			</a>
-		     		</li>
-		     		<li>
-		     			<a href="">
-		     				<div class="proimg">
-		     					<img src="img/ban4.jpg"/>
-		     				</div>
-		     				<div class="protex">
-		     					<div class="name">
-		     						洋河蓝色瓶装经典Q7浓香型白酒500ml52度高端纯粮食白酒2瓶装包邮
-		     					</div>
-		     					<div class="pro-pri">
-		     						$
-		     						<span>100</span>
-		     					</div>
-		     				</div>
-		     			</a>
-		     		</li>
-		     		<li>
-		     			<a href="">
-		     				<div class="proimg">
-		     					<img src="img/ban4.jpg"/>
-		     				</div>
-		     				<div class="protex">
-		     					<div class="name">
-		     						洋河蓝色瓶装经典Q7浓香型白酒500ml52度高端纯粮食白酒2瓶装包邮
-		     					</div>
-		     					<div class="pro-pri">
-		     						$
-		     						<span>100</span>
-		     					</div>
-		     				</div>
-		     			</a>
-		     		</li>
-		     		<li>
-		     			<a href="">
-		     				<div class="proimg">
-		     					<img src="img/ban4.jpg"/>
-		     				</div>
-		     				<div class="protex">
-		     					<div class="name">
-		     						洋河蓝色瓶装经典Q7浓香型白酒500ml52度高端纯粮食白酒2瓶装包邮
-		     					</div>
-		     					<div class="pro-pri">
-		     						$
-		     						<span>100</span>
-		     					</div>
-		     				</div>
-		     			</a>
-		     		</li>
 		     	</ul>
 		     	<div class="promore">
-		     		<a href="#">查看更多 >></a>
+		     		<a href="zhouhanglist.html">查看更多 >></a>
 		     	</div>
 		     </div>
 		</div>
@@ -233,5 +169,50 @@
 	<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/swiper-3.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	   $.ajax({
+	      url: "http://h6.duchengjiu.top/shop/api_goods.php",
+	      type: "get",//请求的方式
+	      dataType: "json",//JSON, XML, HTML
+	      data: {},
+	      success: function (json){
+	        var data = json.data;
+	        var str2 = ''
+	        for (var z=0 ;z < 4; z++) {
+	        	var str = '';
+	        	 for (var i = 0; i < 3; i++) {
+		          var j = parseInt(Math.random()*4) + i;
+		          var obj = data[j];
+		          str += `<a href="Details.html?goods_id=${obj.goods_id}"><img src='${obj.goods_thumb}'/></a>`
+		        }
+		        $('.goods-list').eq(z).html(str);
+		    }; 
+		    for (var i = 0; i < 4;i ++) {
+		    	var j = parseInt(Math.random()*4) + i;
+		    	var obj2 = data[j];
+		          str2 += `
+		          <li>
+		          	<a href="Details.html?goods_id=${obj2.goods_id}">
+	     				<div class="proimg">
+	     					<img src="${obj2.goods_thumb}"/>
+	     				</div>
+	     				<div class="protex">
+	     					<div class="name">
+	     						${obj2.goods_name}
+	     					</div>
+	     					<div class="pro-pri">
+	     						¥
+	     						<span>${obj2.price}</span>
+	     					</div>
+	     				</div>
+		     		</a>
+		          </li>  `
+		    }
+		    $('.pro-list').html(str2);
+	      }
+	    }
+	  );
+	  
+  	</script>
 </body>
 </html>

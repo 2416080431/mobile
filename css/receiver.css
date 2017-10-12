@@ -1,0 +1,99 @@
+*{
+		margin:0;
+		padding:0;
+	}
+	.WholePage{
+		height:100%;
+		font-size:16px;
+		background-color:#fff;
+		margin:0 auto;
+	}
+	.y-header{
+		position:relative;
+		height:3em;
+		border:1px solid #e1e1e1;
+		background-color:#f5f5f5;
+	}
+	.y-header-icon{
+		position:absolute;
+		top:0;
+		left:0;
+		width:40px;
+		height:40px;
+	}
+	.y-header-icon i{
+		width:20px;
+		height:20px;
+		display:block;
+		background:url(../img/icon-back.png) no-repeat;
+		background-size:20px;
+		margin:15px 0 0 10px;
+	}
+	.y-header-title{
+		margin:0 50px;
+		text-align:center;
+		height:3em;
+		line-height:3em;
+		color:#252525;
+		font-size:1em;
+	}
+	.y-content{
+		height:100%;
+		background:#f5f5f5;
+	}
+	.y-address{
+		background-color:#fff;
+		margin-top:0;
+		position:relative;
+		overflow:hidden;
+	}
+	.y-list{
+		border-bottom:10px solid #f5f5f5;
+	}
+	.y-addressDetail{
+		position:relative;
+		padding:20px;
+	}
+	.y-addressEdit{
+		position:absolute;
+		display:block;
+		right:20px;
+		top:20px;
+		width:24px;
+		height:24px;
+		background:url(../img/icon-edit.png) no-repeat;
+		background-size:24px;
+	}
+	.y-detailTitle{
+		margin-bottom:1em;
+		font-weight:400;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+	}
+	.y-site{
+		font-size:13px;
+		color:#232323;
+		
+	}
+	.default-add{
+		display:inline-block;
+		margin-top:10px;
+		font-size:13px;
+		color:#fff;
+		background:#e21323;
+		padding:0 5px;
+	}
+	.y-addAddress{
+		margin:2em 1em .5em;
+	}
+	.showAddress{
+		background-color:#1aad19;
+		color:#fff;
+		text-decoration:none;
+		display:block;
+		padding:1em;
+		font-size:1.125em;
+		text-align:center;
+		border-radius:10px;
+	}

@@ -9,9 +9,11 @@ $(function(){
 			if(response.code === 0){
 				localStorage.setItem("token",response.data.token);
 				localStorage.setItem("username",response.data.username);
-				window.location.href="index.html";
+				if(localStorage.backurl) location.href=localStorage.backurl;
+				else location.href="index.html";
 			}else{
-				
+				$(".modal-body p").text(response.message);
+				$("#myModal").modal("show");
 			}
 		});
 	})
