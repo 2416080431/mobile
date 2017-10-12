@@ -2,9 +2,139 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
 </head>
 <body>
+	<!--顶部搜索-->
+	<header class="header">
+		<div id="seacherBar"class="search_bar">
+			<div class="search_box">
+				<i class="icon_search"></i>
+				<input placeholder="搜索你想要到商品"></input>
+			</div>
+		</div>
+	</header>
+	<!--主体-->
+	<div class="content">
+		<!--顶部轮播-->
+		<div class="swiper-container swiper-banner swiper-container-horizontal">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="#">
+						<img src="img/ban4.jpg"/>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#">
+						<img src="img/ban4.jpg"/>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#">
+						<img src="img/ban4.jpg"/>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#">
+						<img src="img/ban4.jpg"/>
+					</a>
+				</div>
+			</div>
+			<div class="swiper-pagination swiper-pagination-bullets">
+				<span class="swiper-pagination-bullet"></span>
+				<span class="swiper-pagination-bullet"></span>
+				<span class="swiper-pagination-bullet"></span>
+				<span class="swiper-pagination-bullet"></span>
+			</div>
+		</div>
+		<!--图片分类-->
+		<div class="flex iconlist-box">
+			<div class="flex__item">
+				<a href="#"class="wy-links-iconlist">
+					<div class="img">
+						<img src="img/icon-link1.png"/>
+					</div>
+					<p>精选推荐</p>
+				</a>
+			</div>
+			<div class="flex__item">
+				<a href="#"class="wy-links-iconlist">
+					<div class="img">
+						<img src="img/icon-link2.png"/>
+					</div>
+					<p>酒水专场</p>
+				</a>
+			</div>
+			<div class="flex__item">
+				<a href="#"class="wy-links-iconlist">
+					<div class="img">
+						<img src="img/icon-link3.png"/>
+					</div>
+					<p>订单管理</p>
+				</a>
+			</div>
+			<div class="flex__item">
+				<a href="#"class="wy-links-iconlist">
+					<div class="img">
+						<img src="img/icon-link4.png"/>
+					</div>
+					<p>商家入驻</p>
+				</a>
+			</div>
+		</div>
+		<!--新闻-->
+		<div class="news">
+			<i class="news-icon"></i>
+			<div class="swiper-container swiper-news swiper-container-vertical">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="">蓝之蓝股份成公司上市</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="">热烈祝贺伟义商城成功热烈祝贺伟义商城成功上线热烈祝贺伟义商城成功上线上线</a>
+					</div>	
+					<div class="swiper-slide">
+						<a href="">蓝之蓝股份成公司上市</a>
+					</div>	
+					<div class="swiper-slide">
+						<a href="">热烈祝贺伟义商城成功热烈祝贺伟义商城成功上线热烈祝贺伟义商城成功上线上线</a>
+					</div>
+				</div>
+				<div class="swiper-pagination swiper-pagination-bullets">
+					<span class="swiper-pagination-bullet"></span>
+					<span class="swiper-pagination-bullet"></span>
+				</div>
+			</div>
+		</div>
+		</div>
+		
+		
+		<div class="foot-black"></div>
+		<div class="tabbar foot-menu">
+			<a href="" class="tabbar_item item_on">
+				<div class="tabbar_icon home"></div>
+				<p class="tabbar_label">首页</p>
+			</a>
+			<a href="" class="tabbar_item">
+				<div class="tabbar_icon list"></div>
+				<p class="tabbar_label">分类</p>
+			</a>
+			<a href="" class="tabbar_item ">
+				<div class="tabbar_icon cart"></div>
+				<p class="tabbar_label">购物车</p>
+			</a>
+			<a href="my.html" class="tabbar_item">
+				<div class="tabbar_icon member"></div>
+				<p class="tabbar_label">我的</p>
+			</a>
+		</div>	
 	
+	<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper-3.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

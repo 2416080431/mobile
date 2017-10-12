@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+  <title>Document</title>
+   <style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	.WholePage{
+		height:100%;
+		font-size:16px;
+		background-color:#f5f5f5;
+		margin:0 auto;
+	}
+	.y-header{
+		position:relative;
+		height:3em;
+		border:1px solid #e1e1e1;
+		background-color:#f5f5f5;
+	}
+	.y-header-icon{
+		position:absolute;
+		top:0;
+		left:0;
+		width:40px;
+		height:40px;
+	}
+	.y-header-icon i{
+		width:20px;
+		height:20px;
+		display:block;
+		background:url(img/icon-back.png) no-repeat;
+		background-size:20px;
+		margin:15px 0 0 10px;
+	}
+	.y-header-title{
+		margin:0 50px;
+		text-align:center;
+		height:3em;
+		line-height:3em;
+		color:#252525;
+		font-size:1em;
+	}
+	.y-scontent{
+		background:#f5f5f5;
+	}
+	.y-saddress{
+		position:relative;
+		margin-top:2em;
+		background:#fff;
+	}
+	.y-cell{
+		padding:.625em .9375em;
+		
+		list-style:none;
+		border:1px solid #f5f5f5;
+		overflow:hidden;
+	}
+	.y-celltitle{
+		
+		font-size:.875em;
+		margin-right:2em;
+	}
+	.y-input{
+		width:65%;
+		border:none;
+		
+	}
+	.y-textarea{
+		width:100%;
+		overflow:hidden;
+		display:block;
+		resize:none;
+		border:none;
+	}
+	.y-checkbox{
+		float:right;
+		width:2.5em;
+		height:2.5em;
+	}
+	.y-sarea{
+		margin:2em 1em .5em;
+	}
+
+	.y-getAddress{
+		background-color:#1aad19;
+		color:#fff;
+		box-sizing:border-box;
+		text-decoration:none;
+		display:block;
+		padding:1em;
+		font-size:1.125em;
+		text-align:center;
+		border-radius:10px;
+		margin-bottom:1.25em;
+	}
+	.y-removeAddress{
+		background-color:#e64340;
+		color:#fff;
+		box-sizing:border-box;
+		text-decoration:none;
+		display:block;
+		padding:1em;
+		font-size:1.125em;
+		text-align:center;
+		border-radius:10px;
+	}
+	</style>
+ </head>
+ <body>
+  <!--编辑地址-->
+  <div class="WholePage">
+  <!--头部-->
+		<div class="y-header">
+			<div class="y-header-icon">
+				<i></i>
+			</div>
+			<div class="y-header-title">
+				编辑地址
+			</div>
+		</div>
+	<!--内容-->
+	<div class="y-scontent">
+		<!--内容1-->
+		<div class="y-saddress">
+			<ul class="y-ul">
+				<li class="y-cell">
+					<span class="y-celltitle">收货人</span>
+					<input placeholder="胡健" class="y-input">
+				</li>
+				<li class="y-cell">
+					<span class="y-celltitle">手机号</span>
+					<input placeholder="12345678901" class="y-input">
+				</li>
+				<li class="y-cell">
+					<span class="y-celltitle">所在地区</span>
+					<input class="y-input" value="湖南省 长沙市 芙蓉区">
+				</li>
+				<li class="y-cell">
+					<span class="y-celltitle">详细地址</span>
+					<textarea class="y-textarea" placeholder="五一大道嘉顿新天地商务楼十一楼1111111111111111111111111111111111111111"></textarea>
+				</li>
+				<li class="y-cell">
+					<span class="y-celltitle">默认地址</span>
+					<input type="checkbox" class="y-checkbox">
+				</li>
+			</ul>
+		</div>
+		<!--内容2-->
+		<div class="y-sarea">
+			<a href="#" class="y-getAddress">保存此地址</a>
+			<a href="#" class="y-removeAddress">删除此地址</a>
+		</div>
+	</div>
+ </div>
+ </body>
+</html>

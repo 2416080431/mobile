@@ -1,0 +1,27 @@
+*{padding: 0;margin: 0;}
+.wy-content{
+	width: 100%;
+	height: 100vh;
+	background: url(../img/zhou/4.jpg)no-repeat;
+	background-size: 100% 100%;
+}
+.w1{
+	width: 40%;
+	float: left;
+	margin: 25px;
+	background: url(../img/zhou/2.jpg)no-repeat;
+	background-size: 100% 100%;
+}
+.w1>span{
+	font-size: 50px;
+	color: dodgerblue;
+	position: relative;
+	left: 90px;	
+}
+.w2 img{
+	width: 1000px;	
+}
+.w3{
+	width: 200px;
+	height: 100px;
+}
