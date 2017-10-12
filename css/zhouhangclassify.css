@@ -6,22 +6,31 @@
 	background-size: 100% 100%;
 }
 .w1{
-	width: 40%;
+	width: 35%;
+	height: 5%;
 	float: left;
-	margin: 25px;
+	margin: 20px;
 	background: url(../img/zhou/2.jpg)no-repeat;
 	background-size: 100% 100%;
 }
-.w1>span{
-	font-size: 50px;
-	color: dodgerblue;
+.w1 span{
+	width: 100%;
+	font-size: 20px;
+	color: red;
 	position: relative;
-	left: 90px;	
+	left: 20px;	
+	text-align: center;
 }
 .w2 img{
-	width: 1000px;	
+	width: 100%;	
+	
 }
-.w3{
-	width: 200px;
-	height: 100px;
+
+@media only screen and (min-width: 768px) {
+	.w1>span{
+		font-size: 40px;
+		position: relative;
+		left: 60px;
+		
+	}
 }

@@ -1,0 +1,222 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.cart{
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	background: #FFFFFF;
+}
+
+/*购物车头部*/
+.cart-head{
+	height: 50px;
+	border-bottom: 1px solid #e1e1e1;
+	position: relative;
+	background: linear-gradient(to bottom, #fff 0%,#efefef 100%);
+}
+.cart-head-icon-back{
+	position: absolute;
+	left: 0;top: 0;
+	width: 15%;height: 100%;
+}
+.cart-head-icon-back span{
+	width: 100%;height: 100%;
+	margin: 18% 0 0 8%;
+	background: url(../img/icon-back.png) no-repeat;
+	background-size: 50%;
+	display: block;
+}
+.cart-head-title{
+	margin: 0 100px;
+    text-align: center;
+    height: 100%;
+    line-height: 50px;
+    font-size: 18px;
+    color: #252525;
+}
+
+
+/*购物车主体*/
+.cart-body{
+	background: #F5F5F5;
+}
+
+/*购物车内容*/
+.cart-body-part:first-child{
+	margin-top: 0;
+}
+.cart-body-part{
+    background-color: #fff;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.cart-body-part:after, .cart-body-part:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    color: #e5e5e5;
+}
+
+.cart-body-part:before {
+    top: 0;
+    border-top: 1px solid #e5e5e5;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+}
+
+.part-head{
+	padding: 10px 15px 10px 10px;
+	color: #999999;
+	font-size: 16px;
+	position: relative;
+}
+.part-head:after{
+	left: 10px;
+	content: " ";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 2px solid #e5e5e5;
+    color: #e5e5e5;
+    transform-origin: 0 100%;
+    transform: scaleY(.5);
+}
+.part-dele{
+	width: 1.5em;
+    height: 1.5em;
+    float: right;
+    background: url(../img/icon-dele.png) no-repeat;
+    display: block;
+    background-size: 1.5em;
+}
+
+.body-content{
+	padding: 10px;
+	display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.body-checkbox{
+	width: 10%;height: 100px;
+    margin-right: 5px;
+    line-height: 60px;
+    text-align: center;
+    position: relative;
+}
+.body-checkbox input{
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	top: 25%;left: 25%;
+}
+
+.body-pic img{
+	width: 100%;
+}
+.body-describe h1{
+	margin-top: 0;
+	margin-bottom: 10px;
+	height: 40px;
+	line-height: 11px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.body-describe h1 a{
+	font-size: 14px;
+}
+.cart_goods_spec{
+	line-height: 1.4;
+	color: #454545;
+	font-size: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.cart_goods_price {
+	position: relative;
+	width: 100%;height: 30px;
+}
+.cart_goods_price .goods_price{
+	position: absolute;
+	top: 0;left: 0;
+	height: 100%;
+	line-height: 30px;
+}
+.cart_goods_price .goods_number{
+	position: absolute;
+	top: 0;right: 5px;
+	height: 100%;
+}
+.cart_goods_price .goods_number *{
+	float: left;
+}
+.cart_goods_price .goods_number button{
+	width: 30px;height: 30px;border: 0;
+	text-align: center;line-height: 30px;
+	font-size: 24px;
+}
+.cart_goods_price .goods_number input{
+	width: 60px;height: 30px;text-align: center;
+	line-height: 30px;
+	border: 1px solid #E1E1E1;
+}
+
+/*购物车底部*/
+.cart-foot{
+	position: fixed;
+	background-color: #FFFFFF;
+	bottom: 0;
+	width: 100%;height: 50px;
+}
+.cart-foot *{
+	position: absolute;
+	height: 100%;
+}
+.cart-foot .chooseAll{
+	width: 20%;
+	top: 0;left: 0;
+	background: #DDDDDD;
+	text-align: center;line-height: 50px;
+	font-size: 16px;
+}
+.cart-foot .chooseAll input{
+	position: absolute;
+	top:15px;left: 8px;
+	width: 12px;height: 12px;
+}
+.cart-foot .cart-total{
+	top: 0;left: 40%;line-height: 50px;
+	width: 20%;font-size: 14px;
+}
+.cart-foot .cart-total p{
+	position: absolute;
+	width: 60%;font-size: 15px;
+	top: 0;left:50%;
+}
+.cart-foot a{
+	top:0;right: 0;
+	width: 25%;
+	text-align: center;
+	line-height: 50px;
+	background: #e21323;
+	color: #FFFFFF;
+	font-size: 16px;
+}
