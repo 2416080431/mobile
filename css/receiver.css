@@ -59,10 +59,11 @@
 		display:block;
 		right:20px;
 		top:20px;
-		width:24px;
+		width:30px;
 		height:24px;
-		background:url(../img/icon-edit.png) no-repeat;
-		background-size:24px;
+		cursor:pointer;
+		background:url(../img/icon-edit.jpg) no-repeat;
+		background-size:35px;
 	}
 	.y-detailTitle{
 		margin-bottom:1em;

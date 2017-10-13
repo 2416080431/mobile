@@ -5,7 +5,11 @@
 		<title>注册</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 		<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="js/ajax.js" ></script>
+		<script type="text/javascript" src="js/register.js" ></script>
 	</head>
 	<body>
 		<div class="login-container">
@@ -13,21 +17,37 @@
 			<div class="login-form">
 				<div class="login-input">
 					<i class="login-username"></i>
-					<input  type="text" placeholder="请输入用户名"/>
+					<input id="name"  type="text" placeholder="请输入用户名"/>
 				</div>
 				<div class="login-input">
 					<i class="login-pass"></i>
-					<input  type="text" placeholder="请输入密码" />
+					<input id="key"  type="text" placeholder="请输入密码" />
 				</div>
 				<div class="login-input">
 					<i class="login-pass"></i>
-					<input  type="text" placeholder="请再次确认密码" />
+					<input id="confirm"  type="text" placeholder="请再次确认密码" />
 				</div>
 				
-				<input class="login-button login-red-button"  type="button" value="注册并登陆"/>
+				<input id="koukou" class="login-button login-red-button"  type="button" value="注册并登陆"/>
 			</div>
 			
-			
 		</div>
+		
+		<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">  
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">  
+            <div class="modal-header">  
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">  
+                    <span aria-hidden="true">×</span>  
+                </button>  
+                <h4 class="modal-title" id="myModalLabel">错误信息！</h4>  
+            </div>  
+            <div class="modal-body">  
+                <p></p>
+            </div>  
+        </div>  
+    </div>  
+		</div>
+		
 	</body>
 </html>

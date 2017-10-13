@@ -17,6 +17,25 @@ var service={
 		});
 	},
 
+	
+	///////////////////////////注册
+	register: function(name,key,callback){
+		console.log(name,key);
+		$.ajax({
+			type:"post",
+			url:"http://h6.duchengjiu.top/shop/api_user.php",
+			data:{
+				"status": "register",
+        "username": name,
+        "password": key
+			},
+			contentType:"application/x-www-form-urlencoded",
+			success:function(response){
+				callback(response);
+			}
+		});
+	},
+	
 	//////////////////////获取商品分类
 	getGoodsType:function(callback){
 		$.ajax({
@@ -74,6 +93,45 @@ var service={
 		});
 	},
 	
+	///////////////////////////添加收获地址
+	change_receiver: function(token,yname,ycellphone,ydits,callback){
+		$.ajax({
+			type:"post",
+			url:"http://h6.duchengjiu.top/shop/api_useraddress.php?status=add&token="+token,
+			contentType:"application/x-www-form-urlencoded",
+			data:{
+				"address_name":3,
+				"consignee":yname,
+				"country":2,
+				"province":2,
+				"city":3,
+				"district":3,
+				"address":ydits,
+				"zip_code":3,
+				"mobile":ycellphone,
+				"emall":9,
+				"tel":10,
+				"bestting":11,
+				"sign_building":12
+			},
+			success:function(response){
+				callback(response);
+			}
+		});
+	},
+	
+	///////////////////////////删除收获地址
+	delete_receiver: function(token,address_id,callback){
+		$.ajax({
+			type:"get",
+			url:"http://h6.duchengjiu.top/shop/api_useraddress.php?status=delete&address_id="+address_id+"&token="+token,
+			contentType:"application/x-www-form-urlencoded",
+			success:function(response){
+				callback(response);
+			}
+		});
+	},
+	
 	/////////////////////////////加入购物车
 	to_cart: function(goods_id){
 		$.ajax({
@@ -122,10 +180,49 @@ var service={
 		});
 	},
 	
+	/////////////////////////////////////获取购物车商品
+	getCart: function(callback){
+		var token = localStorage.token;
+		$.ajax({
+			type:"get",
+			url:"http://h6.duchengjiu.top/shop/api_cart.php?token="+token,
+			success: function(response){
+				callback(response);
+			}
+		});
+	},
 	
+	/////////////////////////////////////下订单
+	header: function(token,address_id,total_prices,callback){
+		$.ajax({
+			type:"post",
+			url:"http://h6.duchengjiu.top/shop/api_order.php?token="+token+"&status=add&debug=1",
+			data:{
+        "address_id": address_id,
+        "total_prices": total_prices
+			},
+			contentType:"application/x-www-form-urlencoded",
+			success:function(response){
+				callback(response);
+			}
+		});
+	},
 }
 
 
+
+
+/////////////////////显示底部导航购物车商品数量
+$(function(){
+	service.getCart(function(response){
+		var obj = response.data;
+		if(obj.length == 0){
+			$(".cart_count").css("display","none");
+		}else{
+			$(".cart_count").text(obj.length);
+		}
+	})
+})
 
 
 

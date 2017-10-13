@@ -1,161 +1,27 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>购物车</title>
-		<link rel="stylesheet" href="css/animate.css" />
-		<link rel="stylesheet" href="css/animate.min.css" />
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
-		<link rel="stylesheet" href="css/swiper.min.css" />
-		<link rel="stylesheet" href="css/cart.css" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
-	</head>
-	<body>
-		<div class="cart">
-			<div class="cart-head">
-				<div class="cart-head-icon-back">
-					<span></span>
-				</div>
-				<div class="cart-head-title">购物车</div>
-			</div>
-			<div class="cart-body">
-				<div class="cart-body-part">
-					<div class="part-head">
-						<span>江苏蓝之蓝旗舰店</span>
-						<a href="#" class="part-dele"></a>
+<head>
+    <meta charset="utf-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="css/cart.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+</head>
+<body>
+  	<div class="cart">
+  		<a href="index.html">
+				<div class="cart-head">
+					<div class="cart-head-icon-back">
+						<span></span>
 					</div>
-					<div class="part-body">
-						<div class="body-content">
-							<div class="body-checkbox">
-								<input type="checkbox" name=""/>
-							</div>
-							<div class="body-pic">
-								<a href="">
-									<img src="img/demo.jpg" />
-								</a>
-							</div>
-							<div class="body-describe">
-								<h1>
-									<a href="" class="cart_goods_dec">蓝之蓝蓝色瓶装经典Q7浓香型白酒500ml52度高端纯粮食酒2瓶装包邮</a>
-								</h1>
-								<p class="cart_goods_spec">
-									规格：
-									<span>红色</span>
-									，
-									<span>23</span>
-								</p>
-								<div class="cart_goods_price">
-									<div class="goods_price">
-										¥
-										<span class="num font-15">296.00</span>
-									</div>
-									<div class="goods_number">
-										<button>-</button>
-										<input type="text" value="1"/>
-										<button>+</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<div class="cart-head-title">购物车</div>
 				</div>
-				<div class="cart-body-part">
-					<div class="part-head">
-						<span>江苏蓝之蓝旗舰店</span>
-						<a href="#" class="part-dele"></a>
-					</div>
-					<div class="part-body">
-						<div class="body-content">
-							<div class="body-checkbox">
-								<input type="checkbox" name=""/>
-							</div>
-							<div class="body-pic">
-								<a href="">
-									<img src="img/demo.jpg" />
-								</a>
-							</div>
-							<div class="body-describe">
-								<h1>
-									<a href="" class="cart_goods_dec">蓝之蓝蓝色瓶装经典Q7浓香型白酒500ml52度高端纯粮食酒2瓶装包邮</a>
-								</h1>
-								<p class="cart_goods_spec">
-									规格：
-									<span>红色</span>
-									，
-									<span>23</span>
-								</p>
-								<div class="cart_goods_price">
-									<div class="goods_price">
-										¥
-										<em class="num font-15">296.00</em>
-									</div>
-									<div class="goods_number">
-										<button>-</button>
-										<input type="text" value="1"/>
-										<button>+</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="cart-body-part">
-					<div class="part-head">
-						<span>江苏蓝之蓝旗舰店</span>
-						<a href="#" class="part-dele"></a>
-					</div>
-					<div class="part-body">
-						<div class="body-content">
-							<div class="body-checkbox">
-								<input type="checkbox" name=""/>
-							</div>
-							<div class="body-pic">
-								<a href="">
-									<img src="img/demo.jpg" />
-								</a>
-							</div>
-							<div class="body-describe">
-								<h1>
-									<a href="" class="cart_goods_dec">蓝之蓝蓝色瓶装经典Q7浓香型白酒500ml52度高端纯粮食酒2瓶装包邮</a>
-								</h1>
-								<p class="cart_goods_spec">
-									规格：
-									<span>红色</span>
-									，
-									<span>23</span>
-								</p>
-								<div class="cart_goods_price">
-									<div class="goods_price">
-										¥
-										<em class="num font-15">296.00</em>
-									</div>
-									<div class="goods_number">
-										<button>-</button>
-										<input type="text" value="1"/>
-										<button>+</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="cart-foot">
-				<div class="chooseAll">
-					<input type="checkbox" />
-					&nbsp;&nbsp;全选
-				</div>
-				<div class="cart-total">
-					合计：
-					<p>
-						￥
-						<span>2222.00</span>
-					</p>
-				</div>
-				<a href="">去结算</a>
-			</div>
+			</a>
+		<div class="cart-body" id="cart-body">
 		</div>
-	</body>
+		<div class="cart-foot" id="cart-foot">
+		</div>
+	</div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/cart.js" type="text/javascript"></script>
+  </body>
 </html>

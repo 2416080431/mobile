@@ -22,8 +22,8 @@
 				padding: 0;
 			}
 			.goods-head{
-				height: 10%
-				border-bottom: 0.01%px solid #e1e1e1;
+				height: 10%;
+				border-bottom: 2px solid #e1e1e1;
 				position: relative;
 				background: linear-gradient(to bottom, #fff 0%,#efefef 100%);
 			}
@@ -49,7 +49,7 @@
 			}
 			.big {
 				width: 100%;
-				height: 80%;
+				height: 60%;
 				margin-bottom: 35%;
 			}
 			
@@ -286,12 +286,14 @@
 		</style>
 	</head>
 	<body>
-		<div class="goods-head">
-			<div class="goods-head-icon-back">
-				<span></span>
+		<a style="text-decoration: none;" href="javascript: history.back(-1)">
+			<div class="goods-head">
+				<div class="goods-head-icon-back">
+					<span></span>
+				</div>
+				<div class="goods-head-title">商品详情</div>
 			</div>
-			<div class="goods-head-title">商品详情</div>
-		</div>
+		</a>
 		<div class="big">
 		<script src="js/jquery-3.2.1.js"></script>
 		<script src="js/ajax.js"></script>

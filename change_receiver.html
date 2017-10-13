@@ -8,8 +8,15 @@
   <meta name="Description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
   <script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+  <script type="text/javascript" src="js/ajax.js" ></script>
+  <script type="text/javascript" src="js/change_receiver.js" ></script>
+  <script src="js/jquery.cascade.0.1.js"></script>
   <title>Document</title>
    <style>
+   	select {
+   		-webkit-appearance: none;
+   		border-radius: 10%;
+   	}
 	*{
 		margin:0;
 		padding:0;
@@ -58,20 +65,26 @@
 	}
 	.y-cell{
 		padding:.625em .9375em;
-		
 		list-style:none;
 		border:1px solid #f5f5f5;
 		overflow:hidden;
 	}
 	.y-celltitle{
-		
 		font-size:.875em;
 		margin-right:2em;
 	}
+	.y-celltit {
+		margin-right: 0.5em;
+	}
 	.y-input{
 		width:65%;
-		border:none;
-		
+	}
+	
+	.sheng {
+		width: 31.5%;
+	}
+	.shi {
+		width: 31.5%;
 	}
 	.y-textarea{
 		width:100%;
@@ -113,6 +126,7 @@
 		border-radius:10px;
 	}
 	</style>
+	<script src="js/city.js"></script>
  </head>
  <body>
   <!--编辑地址-->
@@ -133,19 +147,63 @@
 			<ul class="y-ul">
 				<li class="y-cell">
 					<span class="y-celltitle">收货人</span>
-					<input placeholder="胡健" class="y-input">
+					<input placeholder="胡健" class="y-input y-name">
 				</li>
 				<li class="y-cell">
 					<span class="y-celltitle">手机号</span>
-					<input placeholder="12345678901" class="y-input">
+					<input placeholder="12345678901" class="y-input y-cellphone">
 				</li>
-				<li class="y-cell">
-					<span class="y-celltitle">所在地区</span>
-					<input class="y-input" value="湖南省 长沙市 芙蓉区">
+				<li class="y-cell" onload="init()">
+					<span class="y-celltit">所在地区</span>
+					
+						<!--省-->
+						<select class="sheng" id="province" size=1 onchange="getCity()">
+							<option value=0>北京</option>
+							<option value=1>上海</option>
+							<option value=2>天津</option>
+							<option value=3>重庆</option>
+							<option value=4>河北</option>
+							<option value=5>山西</option>
+							<option value=6>内蒙古</option>
+							<option value=7>辽宁</option>
+							<option value=8>吉林</option>
+							<option value=9>黑龙江</option>
+							<option value=10>江苏</option>
+							<option value=11>浙江</option>
+							<option value=12>安徽</option>
+							<option value=13>福建</option>
+							<option value=14>江西</option>
+							<option value=15>山东</option>
+							<option value=16>河南</option>
+							<option value=17>湖北</option>
+							<option value=18>湖南</option>
+							<option value=19>广东</option>
+							<option value=20>广西</option>
+							<option value=21>海南</option>
+							<option value=22>四川</option>
+							<option value=23>贵州</option>
+							<option value=24>云南</option>
+							<option value=25>西藏</option>
+							<option value=26>陕西</option>
+							<option value=27>甘肃</option>
+							<option value=28>宁夏</option>
+							<option value=29>青海</option>
+							<option value=30>新疆</option>
+							<option value=31>香港</option>
+							<option value=32>澳门</option>
+							<option value=33>台湾</option>
+						</select>
+						<!--市-->
+						<select class="shi" id="city">
+							<option>朝阳</option>
+						</select>
+						
+						
+				
 				</li>
 				<li class="y-cell">
 					<span class="y-celltitle">详细地址</span>
-					<textarea class="y-textarea" placeholder="五一大道嘉顿新天地商务楼十一楼1111111111111111111111111111111111111111"></textarea>
+					<textarea class="y-textarea y-dits" placeholder="五一大道嘉顿新天地商务楼十一楼1111111111111111111111111111111111111111"></textarea>
 				</li>
 				<li class="y-cell">
 					<span class="y-celltitle">默认地址</span>
@@ -156,7 +214,6 @@
 		<!--内容2-->
 		<div class="y-sarea">
 			<a href="#" class="y-getAddress">保存此地址</a>
-			<a href="#" class="y-removeAddress">删除此地址</a>
 		</div>
 	</div>
  </div>
