@@ -140,7 +140,7 @@ var oOrder = document.querySelector('#order');
 					+'</div>'
 					+'<div class="order-each-operation">'
 						+'<button>评价</button>'
-						+'<button data-id="'+obj.order_id+'" class="cancel-order">删除订单</button>'
+						+'<button data-id="'+obj.order_id+'" class="cancel-order">再来一单</button>'
 					+'</div>'
 				 	+'</li>'
           }

@@ -81,7 +81,7 @@ var service={
 		});
 	},
 	
-	///////////////////////////获取收获地址
+	///////////////////////////获取收货地址
 	receiver: function(token,callback){
 		$.ajax({
 			type:"get",
@@ -93,7 +93,7 @@ var service={
 		});
 	},
 	
-	///////////////////////////添加收获地址
+	///////////////////////////添加收货地址
 	change_receiver: function(token,yname,ycellphone,ydits,callback){
 		$.ajax({
 			type:"post",
@@ -143,7 +143,8 @@ var service={
 				console.log(response);
 		        if (response.code === 0) {
 		            if (localStorage.username) {
-		            	 alert('添加到购物车成功');
+		            	$("#toCartModal .modal-body p").text("成功添加到购物车");
+		            	 $("#toCartModal").modal("show");
 		            }else {
 		            	location.href = 'login.html';
 		            }

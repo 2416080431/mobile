@@ -4,7 +4,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-		<title></title>
+		<title>商品详情</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
 		<style>
 			html,
@@ -49,7 +50,7 @@
 			}
 			.big {
 				width: 100%;
-				height: 60%;
+				height: 50%;
 				margin-bottom: 35%;
 			}
 			
@@ -85,12 +86,13 @@
 			.Commodity_name {
 				padding-top: 2%;
 				background: #fff;
+				font-size: 1.5em;
 			}
 			
 			.Price {
 				padding-top: 2%;
 				background: #fff;
-				font-size: 1.5em;
+				font-size: 3em;
 				color: red;
 			}
 			
@@ -106,7 +108,7 @@
 			}
 			
 			.favourable {
-				margin-top: 5%;
+				margin-top: 40%;
 				width: 100%;
 				height: 20%;
 				background-color: #fff;
@@ -130,6 +132,8 @@
 			}
 			.kuang {
 				border: 0.01em solid red;
+				padding: .3em;
+				margin-right: 10px;
 			}
 			.go {
 				width: 19%;
@@ -171,12 +175,12 @@
 			}
 			.transport {
 				width: 100%;
-				height: 40%;
+				height: 35%;
 				background-color: #FFFFFF;
 				margin-top: 5%;
 			}
 			.to {
-				height: 25%;
+				height: 15%;
 			}
 			.j1 {
 				float: left;
@@ -367,12 +371,33 @@
 		</div>
 		
 		<script src="js/swiper-3.4.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
 		<script>
 			var swiper = new Swiper('.swiper-container', {
 				pagination: '.swiper-pagination',
 				paginationClickable: true
 			});
 		</script>
+		
+		
+		<div class="modal fade" id="toCartModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">  
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">  
+            <div class="modal-header">  
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">  
+                    <span aria-hidden="true">×</span>  
+                </button> 
+                <h4 class="modal-title" id="myModalLabel">提示信息！</h4>  
+            </div>  
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">确认</button>
+            </div>
+        </div>  
+    </div>  
+		</div>
 	</body>
 		
 	</html>

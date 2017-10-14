@@ -4,13 +4,13 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 		<meta charset="UTF-8">
-		<title></title>
+		<title>订单详情</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/header.css" />
 		<script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
 		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
-		<script type="text/javascript" src="js/header.js" ></script>
 		<script type="text/javascript" src="js/ajax.js" ></script>
+		<script type="text/javascript" src="js/header.js" ></script>
 	</head>
 
 	<body>
@@ -31,12 +31,12 @@
 					</div>
 
 					<div class="receiver-box2">
-						<a>
+						<a href="receiver.html">
 							<h1 class="adress-name">
-								<span>找炮友</span>
-								<span>13838384380</span>
+								<span id="address_name">选择收货地址>>></span>
+								<span id="address_cell"></span>
 							</h1>
-							<div class="adress-txt">长沙市开福区嘉顿新天地商务楼11楼</div>
+							<div id="address_text" class="adress-txt"></div>
 						</a>
 					</div>
 				</div>
@@ -94,7 +94,7 @@
 				</span>
 			</div>
 			<div class="pay-money">
-				<a id="add-order">微信支付</a>
+				<a id="add-order">确认订单</a>
 			</div>
 		</div>
 		
@@ -106,7 +106,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">  
                     <span aria-hidden="true">×</span>  
                 </button>  
-                <h4 class="modal-title" id="myModalLabel">错误信息！</h4>  
+                <h4 class="modal-title" id="myModalLabel">提示信息！</h4>  
             </div>  
             <div class="modal-body">  
                 <p></p>

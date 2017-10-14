@@ -11,12 +11,14 @@ $(function(){
       var target = event.target || event.srcElement;
       if (target.className === 'to_cart') {
         if (!localStorage.token) {
-          alert('请先登录再购买');
+          $("#toCartModal .modal-body p").text("请先登录再购买");
+		      $("#toCartModal").modal("show");
           //把当前商品的详细地址存储到localStorage.backurl
           localStorage.backurl = location.href
           //跳转到登录页
-          location.href = "login.html";
-          return;
+          $(".btn-primary").on("touchstart",function(){
+          	location.href = "login.html";
+          })
         }else{
         	service.to_cart(goods_id);
         }
@@ -35,5 +37,9 @@ $(function(){
 		} else {
 			location.href = "login.html";
 		}
+	});
+	
+	$("#toCartModal .btn-primary").on("touchstart",function(){
+		$("#toCartModal").modal("hide");
 	})
 })

@@ -63,7 +63,7 @@
 		height:24px;
 		cursor:pointer;
 		background:url(../img/icon-edit.jpg) no-repeat;
-		background-size:35px;
+		background-size:100% 100%;
 	}
 	.y-detailTitle{
 		margin-bottom:1em;

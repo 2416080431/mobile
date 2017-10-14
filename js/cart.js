@@ -243,12 +243,15 @@ $(function(){
 		}
 		// 删除某件商品
 		function deleteGoods(obj) {
-		    alert("确定？");
-		    var del = obj.parentNode.nextSibling.querySelector('#left-button');
+	    $("#deleteCatModal").modal("show");
+	    $("#deleteCatModal .btn-primary").on("touchstart",function(){
+	    	var del = obj.parentNode.nextSibling.querySelector('#left-button');
 		    var Shop = obj.parentNode.parentNode.parentNode;
 		    updataCart(del, 0);
 		    var goods = obj.parentNode.parentNode;
 		    Shop.removeChild(goods);
+		    $("#deleteCatModal").modal("hide");
+	    });
 		}
 		// 加某件商品
 		function plusGoods(obj) {
@@ -298,7 +301,6 @@ $(function(){
 		    } else {
 		        goods_number_value = 0;
 		    }
-		    console.log(goods_number_value);
 		    goods_number.value = goods_number_value;
 		    updateCartInfo(goods_id, goods_number_value, function () {});
 		    showSum();

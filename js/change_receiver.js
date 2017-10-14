@@ -4,7 +4,8 @@ $(function(){
 		var token = localStorage.getItem("token");
 		var yname=$(".y-name").val();
 		var ycellphone=$(".y-cellphone").val();
-		var ydits=$(".y-dits").val();
+		var ydits = $("#province option:selected").text()+ $("#city option:selected").text()+" "+ $(".y-dits").val();
+		console.log(ydits);
 		service.change_receiver(token,yname,ycellphone,ydits,function(response){	
 			location.href="receiver.html";		
 		})

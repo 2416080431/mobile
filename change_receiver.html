@@ -11,7 +11,7 @@
   <script type="text/javascript" src="js/ajax.js" ></script>
   <script type="text/javascript" src="js/change_receiver.js" ></script>
   <script src="js/jquery.cascade.0.1.js"></script>
-  <title>Document</title>
+  <title>添加地址</title>
    <style>
    	select {
    		-webkit-appearance: none;
@@ -95,8 +95,8 @@
 	}
 	.y-checkbox{
 		float:right;
-		width:2.5em;
-		height:2.5em;
+		width:2em;
+		height:2em;
 	}
 	.y-sarea{
 		margin:2em 1em .5em;
@@ -132,14 +132,16 @@
   <!--编辑地址-->
   <div class="WholePage">
   <!--头部-->
-		<div class="y-header">
-			<div class="y-header-icon">
-				<i></i>
+  	<a style="text-decoration: none;" href="receiver.html">
+			<div class="y-header">
+				<div class="y-header-icon">
+					<i></i>
+				</div>
+				<div class="y-header-title">
+					添加地址
+				</div>
 			</div>
-			<div class="y-header-title">
-				编辑地址
-			</div>
-		</div>
+		</a>
 	<!--内容-->
 	<div class="y-scontent">
 		<!--内容1-->
@@ -203,11 +205,7 @@
 				</li>
 				<li class="y-cell">
 					<span class="y-celltitle">详细地址</span>
-					<textarea class="y-textarea y-dits" placeholder="五一大道嘉顿新天地商务楼十一楼1111111111111111111111111111111111111111"></textarea>
-				</li>
-				<li class="y-cell">
-					<span class="y-celltitle">默认地址</span>
-					<input type="checkbox" class="y-checkbox">
+					<textarea class="y-textarea y-dits" placeholder="五一大道嘉顿新天地商务楼十一楼"></textarea>
 				</li>
 			</ul>
 		</div>
