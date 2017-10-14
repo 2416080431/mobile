@@ -213,8 +213,8 @@ var service={
 
 
 
-/////////////////////显示底部导航购物车商品数量
 $(function(){
+	/////////////////////显示底部导航购物车商品数量
 	service.getCart(function(response){
 		var obj = response.data;
 		if(obj.length == 0){
@@ -222,7 +222,22 @@ $(function(){
 		}else{
 			$(".cart_count").text(obj.length);
 		}
+	});
+	
+	//////////////////////////////阻止未登录就访问购物车和我的
+	$(".goToCart").on("touchstart",function(event){
+		if(!localStorage.token){
+			event.preventDefault();
+			location.href="login.html"
+		}
+	});
+	$(".goToMy").on("touchstart",function(event){
+		if(!localStorage.token){
+			event.preventDefault();
+			location.href="login.html"
+		}
 	})
+	
 })
 
 
